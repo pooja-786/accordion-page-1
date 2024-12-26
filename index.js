@@ -1,21 +1,16 @@
-const accordian = document.querySelectorAll('.accordian');
 
-accordian.forEach(accordian => {
-    const icon = accordian.querySelector('.icon') 
-})
 
 document.addEventListener("DOMContentLoaded", function() {
-    const headers = document.querySelectorAll(".accordion-header");
+    const headers = document.querySelectorAll(".tab");
 
     headers.forEach(header => {
         header.addEventListener("click", function() {
-            // Toggle the active class on the clicked header
-            this.classList.toggle("active");
+            this.classList.toggle(".tab__label::after ");
 
-            // Get the next element (the content)
+        
             const content = this.nextElementSibling;
 
-            // Toggle the display of the content
+    
             if (content.style.display === "block") {
                 content.style.display = "none";
             } else {
@@ -24,3 +19,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
